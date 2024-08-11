@@ -6,6 +6,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 import lombok.experimental.Accessors;
+import net.aniby.paymaster.common.types.payment.PaymentMethod;
+import net.aniby.paymaster.common.types.payment.PaymentSubject;
+import net.aniby.paymaster.common.types.user.AgentType;
+import net.aniby.paymaster.common.types.user.Supplier;
 import org.jetbrains.annotations.NotNull;
 
 @AllArgsConstructor

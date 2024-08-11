@@ -1,4 +1,4 @@
-package net.aniby.paymaster.common.types;
+package net.aniby.paymaster.common.types.user;
 
 import com.google.gson.annotations.SerializedName;
 import lombok.*;
@@ -11,13 +11,16 @@ import lombok.experimental.FieldDefaults;
 @Getter
 @Accessors(fluent = true)
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class Supplier {
+public class Client {
+    @SerializedName("email")
+    String email;
+
+    @SerializedName("phone")
+    String phone;
+
     @SerializedName("name")
     String name;
 
     @SerializedName("inn")
     String inn;
-
-    @SerializedName("phone")
-    String phone;
 }

@@ -11,16 +11,19 @@ import lombok.experimental.FieldDefaults;
 @Getter
 @Accessors(fluent = true)
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class Client {
-    @SerializedName("email")
-    String email;
+public class CardInfo {
+    @SerializedName("brand")
+    String brand;
 
-    @SerializedName("phone")
-    String phone;
+    @SerializedName("issuer")
+    String issuer;
 
-    @SerializedName("name")
-    String name;
+    @SerializedName("country")
+    String country;
 
-    @SerializedName("inn")
-    String inn;
+    @SerializedName("type")
+    String type;
+
+    @SerializedName("category")
+    String category;
 }

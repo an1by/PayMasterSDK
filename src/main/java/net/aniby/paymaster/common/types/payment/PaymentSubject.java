@@ -1,4 +1,4 @@
-package net.aniby.paymaster.common.types;
+package net.aniby.paymaster.common.types.payment;
 
 public enum PaymentSubject {
     Commodity,

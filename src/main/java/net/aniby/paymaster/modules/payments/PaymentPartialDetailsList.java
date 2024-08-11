@@ -1,10 +1,11 @@
-package net.aniby.paymaster.modules.receipts;
+package net.aniby.paymaster.modules.payments;
 
 import com.google.gson.annotations.SerializedName;
 import lombok.*;
 import lombok.experimental.Accessors;
 import lombok.experimental.FieldDefaults;
-import org.jetbrains.annotations.NotNull;
+
+import java.util.ArrayList;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -12,7 +13,7 @@ import org.jetbrains.annotations.NotNull;
 @Getter
 @Accessors(fluent = true)
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class ReceiptRequest {
-    @SerializedName("id")
-    @NotNull String id;
+public class PaymentPartialDetailsList {
+    @SerializedName("items")
+    ArrayList<PaymentPartialDetails> items;
 }

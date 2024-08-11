@@ -5,7 +5,6 @@ import lombok.*;
 import lombok.experimental.Accessors;
 import lombok.experimental.FieldDefaults;
 import net.aniby.paymaster.common.types.Amount;
-import net.aniby.paymaster.common.types.Item;
 import net.aniby.paymaster.common.types.ReceiptStatus;
 import net.aniby.paymaster.common.types.ReceiptType;
 import org.jetbrains.annotations.NotNull;
@@ -18,7 +17,7 @@ import java.util.Date;
 @Getter
 @Accessors(fluent = true)
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class ReceiptCreateResponse {
+public class ReceiptDetails {
     @SerializedName("id")
     @NotNull String id;
 

@@ -49,16 +49,4 @@ public class Item {
 
     @SerializedName("supplier")
     private Supplier supplier;
-    // name	string	Наименования
-    //quantity	decimal	Количество
-    //price	decimal	Цена
-    //measure	string	Единица измерения товара
-    //excise	decimal	Акциз
-    //product
-    //vatType	string	Ставка НДС
-    //paymentSubject	string	Предмет расчета
-    //paymentMethod	string	Способ расчета
-    //marking		Данные маркировки
-    //agentType	string	Признак агента
-    //supplier		Данные поставщика
 }

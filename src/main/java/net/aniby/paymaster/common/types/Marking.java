@@ -1,11 +1,9 @@
 package net.aniby.paymaster.common.types;
 
 import com.google.gson.annotations.SerializedName;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 import lombok.experimental.Accessors;
+import lombok.experimental.FieldDefaults;
 import org.jetbrains.annotations.NotNull;
 
 @AllArgsConstructor
@@ -13,12 +11,13 @@ import org.jetbrains.annotations.NotNull;
 @ToString
 @Getter
 @Accessors(fluent = true)
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class Marking {
     @SerializedName("code")
-    private @NotNull String code;
+    @NotNull String code;
 
     @SerializedName("quantity")
-    private Quantity quantity;
+    Quantity quantity;
 
     public Double calculateQuantity() {
         return quantity == null ? null : (double) quantity.numerator / quantity.denominator;
@@ -29,11 +28,12 @@ public class Marking {
     @ToString
     @Getter
     @Accessors(fluent = true)
+    @FieldDefaults(level = AccessLevel.PRIVATE)
     public static class Quantity {
         @SerializedName("numerator")
-        private int numerator;
+        int numerator;
 
         @SerializedName("denominator")
-        private int denominator;
+        int denominator;
     }
 }

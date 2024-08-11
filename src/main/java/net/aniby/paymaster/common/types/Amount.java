@@ -1,11 +1,9 @@
 package net.aniby.paymaster.common.types;
 
 import com.google.gson.annotations.SerializedName;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 import lombok.experimental.Accessors;
+import lombok.experimental.FieldDefaults;
 import org.jetbrains.annotations.NotNull;
 
 @AllArgsConstructor
@@ -13,9 +11,10 @@ import org.jetbrains.annotations.NotNull;
 @ToString
 @Getter
 @Accessors(fluent = true)
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class Amount {
     @SerializedName("value")
-    private double value;
+    double value;
     @SerializedName("currency")
-    private @NotNull String currency;
+    @NotNull String currency;
 }

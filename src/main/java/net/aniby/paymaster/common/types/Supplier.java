@@ -1,24 +1,23 @@
 package net.aniby.paymaster.common.types;
 
 import com.google.gson.annotations.SerializedName;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 import lombok.experimental.Accessors;
+import lombok.experimental.FieldDefaults;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
 @Getter
 @Accessors(fluent = true)
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class Supplier {
     @SerializedName("name")
-    private String name;
+    String name;
 
     @SerializedName("inn")
-    private String inn;
+    String inn;
 
     @SerializedName("phone")
-    private String phone;
+    String phone;
 }

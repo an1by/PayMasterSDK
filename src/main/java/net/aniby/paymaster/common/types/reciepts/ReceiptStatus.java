@@ -1,4 +1,4 @@
-package net.aniby.paymaster.common.types;
+package net.aniby.paymaster.common.types.reciept;
 
 public enum ReceiptStatus {
     Success,

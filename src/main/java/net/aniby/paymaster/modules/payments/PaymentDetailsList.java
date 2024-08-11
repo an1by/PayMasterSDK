@@ -13,7 +13,7 @@ import java.util.ArrayList;
 @Getter
 @Accessors(fluent = true)
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class PaymentPartialDetailsList {
+public class PaymentDetailsList {
     @SerializedName("items")
-    ArrayList<PaymentPartialDetails> items;
+    ArrayList<PaymentDetails> items;
 }

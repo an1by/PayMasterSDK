@@ -1,4 +1,4 @@
-package net.aniby.paymaster.common.types.user;
+package net.aniby.paymaster.common.types.users;
 
 public enum AgentType {
     BankPaymentAgent,

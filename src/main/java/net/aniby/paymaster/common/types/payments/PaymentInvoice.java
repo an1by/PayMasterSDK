@@ -1,4 +1,4 @@
-package net.aniby.paymaster.common.types.payment;
+package net.aniby.paymaster.common.types.payments;
 
 import com.google.gson.annotations.SerializedName;
 import lombok.*;

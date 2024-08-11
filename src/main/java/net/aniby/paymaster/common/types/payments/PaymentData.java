@@ -1,10 +1,10 @@
-package net.aniby.paymaster.common.types.payment;
+package net.aniby.paymaster.common.types.payments;
 
 import com.google.gson.annotations.SerializedName;
 import lombok.*;
 import lombok.experimental.Accessors;
 import lombok.experimental.FieldDefaults;
-import net.aniby.paymaster.common.types.CardInfo;
+import net.aniby.paymaster.common.types.items.CardInfo;
 
 @AllArgsConstructor
 @NoArgsConstructor

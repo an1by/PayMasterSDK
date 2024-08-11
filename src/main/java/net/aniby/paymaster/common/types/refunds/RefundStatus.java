@@ -1,4 +1,4 @@
-package net.aniby.paymaster.common.types.refund;
+package net.aniby.paymaster.common.types.refunds;
 
 public enum RefundStatus {
     Success,

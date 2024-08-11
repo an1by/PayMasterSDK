@@ -3,9 +3,11 @@ package net.aniby.paymaster.client;
 import com.google.gson.reflect.TypeToken;
 import net.aniby.paymaster.common.exceptions.ResponseBodyException;
 import net.aniby.paymaster.modules.payments.PaymentDetails;
-import net.aniby.paymaster.modules.payments.PaymentPartialDetailsList;
+import net.aniby.paymaster.modules.payments.PaymentDetailsList;
 import net.aniby.paymaster.modules.receipts.ReceiptCreateRequest;
 import net.aniby.paymaster.modules.receipts.ReceiptDetails;
+import net.aniby.paymaster.modules.refunds.RefundCreateRequest;
+import net.aniby.paymaster.modules.refunds.RefundDetails;
 import net.aniby.paymaster.utils.Constants;
 import okhttp3.*;
 import org.jetbrains.annotations.NotNull;
@@ -84,14 +86,37 @@ public class PayMasterClient {
         return getRequest(url, TypeToken.get(PaymentDetails.class));
     }
 
-    public PaymentPartialDetailsList getPaymentDetailsList(@NotNull String merchantId, @NotNull Date start, @NotNull Date end) throws IOException {
+    public PaymentDetailsList getPaymentDetailsList(@NotNull String merchantId, @NotNull Date start, @NotNull Date end) throws IOException {
         String url = new HttpUrl.Builder()
                 .host(Constants.Host.PAYMENTS)
                 .addQueryParameter("merchantId", merchantId)
                 .addQueryParameter("start", DATE_FORMAT.format(start))
                 .addQueryParameter("end", DATE_FORMAT.format(end))
                 .build().toString();
-        return getRequest(url, TypeToken.get(PaymentPartialDetailsList.class));
+        return getRequest(url, TypeToken.get(PaymentDetailsList.class));
+    }
+
+    // Refunds
+    public RefundDetails createRefund(RefundCreateRequest request) throws IOException {
+        return postRequest(request, Constants.Host.REFUNDS, TypeToken.get(RefundDetails.class));
+    }
+
+    public RefundDetails getRefundDetails(@NotNull String id) throws IOException {
+        String url = new HttpUrl.Builder()
+                .host(Constants.Host.REFUNDS)
+                .addPathSegment(id)
+                .build().toString();
+        return getRequest(url, TypeToken.get(RefundDetails.class));
+    }
+
+    public ArrayList<RefundDetails> getRefundDetailsList(@NotNull String merchantId) throws IOException {
+        String url = new HttpUrl.Builder()
+                .host(Constants.Host.REFUNDS)
+                .addQueryParameter("merchantId", merchantId)
+                .build().toString();
+        final TypeToken<ArrayList<RefundDetails>> typeToken = new TypeToken<>() {
+        };
+        return getRequest(url, typeToken);
     }
 
     // Receipts

@@ -15,5 +15,6 @@ public class Constants {
     public static class Host {
         public static final String RECEIPTS = "https://paymaster.ru/api/v2/receipts";
         public static final String PAYMENTS = "https://paymaster.ru/api/v2/payments";
+        public static final String REFUNDS = "https://paymaster.ru/api/v2/refunds";
     }
 }

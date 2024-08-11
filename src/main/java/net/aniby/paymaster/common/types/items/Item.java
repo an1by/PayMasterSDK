@@ -1,4 +1,4 @@
-package net.aniby.paymaster.common.types;
+package net.aniby.paymaster.common.types.items;
 
 import com.google.gson.annotations.SerializedName;
 import lombok.AllArgsConstructor;
@@ -6,10 +6,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 import lombok.experimental.Accessors;
-import net.aniby.paymaster.common.types.payment.PaymentMethod;
-import net.aniby.paymaster.common.types.payment.PaymentSubject;
-import net.aniby.paymaster.common.types.user.AgentType;
-import net.aniby.paymaster.common.types.user.Supplier;
+import net.aniby.paymaster.common.types.payments.PaymentMethod;
+import net.aniby.paymaster.common.types.payments.PaymentSubject;
+import net.aniby.paymaster.common.types.users.AgentType;
+import net.aniby.paymaster.common.types.users.Supplier;
 import org.jetbrains.annotations.NotNull;
 
 @AllArgsConstructor

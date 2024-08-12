@@ -1,4 +1,4 @@
-package net.aniby.paymaster;
+package net.aniby.test;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

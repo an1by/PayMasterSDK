@@ -26,11 +26,12 @@ public class Constants {
 
     public static class Host {
         public static final String API_URL = "https://paymaster.ru/api/v2";
+        public static final String INVOICES = API_URL + "/invoices";
         public static final String RECEIPTS = API_URL + "/receipts";
         public static final String PAYMENTS = API_URL + "/payments";
-        public static final String REFUNDS = API_URL + "/refunds";
-        public static final String STICKERS = API_URL + "/stickers";
         public static final String TOKENIZATION = API_URL + "/tokenization";
         public static final String PAYMENT_TOKENS = API_URL + "/paymenttokens";
+        public static final String REFUNDS = API_URL + "/refunds";
+        public static final String STICKERS = API_URL + "/stickers";
     }
 }

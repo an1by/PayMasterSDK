@@ -29,24 +29,6 @@ public class CreatePaymentBody {
     @SerializedName("tokenization")
     Tokenization tokenization;
 
-    @AllArgsConstructor
-    @NoArgsConstructor
-    @ToString
-    @Getter
-    @Accessors(fluent = true)
-    @FieldDefaults(level = AccessLevel.PRIVATE)
-    public static class Tokenization {
-        @SerializedName("type")
-        @NotNull
-        TokenType type;
-
-        @SerializedName("purpose")
-        String purpose;
-
-        @SerializedName("callbackUrl")
-        String callbackUrl;
-    }
-
     @SerializedName("invoice")
     @NotNull
     PaymentInvoice invoice;

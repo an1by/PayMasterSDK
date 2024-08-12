@@ -3,9 +3,7 @@ package net.aniby.paymaster.client;
 import com.google.gson.reflect.TypeToken;
 import net.aniby.paymaster.exceptions.ResponseBodyException;
 import net.aniby.paymaster.modules.ItemList;
-import net.aniby.paymaster.modules.payments.CompletePaymentBody;
-import net.aniby.paymaster.modules.payments.ConfirmPaymentBody;
-import net.aniby.paymaster.modules.payments.PaymentDetails;
+import net.aniby.paymaster.modules.payments.*;
 import net.aniby.paymaster.modules.receipts.CreateReceiptBody;
 import net.aniby.paymaster.modules.receipts.ReceiptDetails;
 import net.aniby.paymaster.modules.refunds.CreateRefundBody;
@@ -95,6 +93,14 @@ public class PayMasterClient {
 
     // Main functions
     // Payments
+    public InvoiceCallback createInvoice(@NotNull CreateInvoiceBody body) throws IOException {
+        return postRequest(body, Constants.Host.PAYMENTS, TypeToken.get(InvoiceCallback.class));
+    }
+
+    public PaymentDetails createPayment(@NotNull CreatePaymentBody body) throws IOException {
+        return postRequest(body, Constants.Host.PAYMENTS, TypeToken.get(PaymentDetails.class));
+    }
+
     public PaymentDetails completePayment(@NotNull String id, @NotNull CompletePaymentBody body) throws IOException {
         String url = new HttpUrl.Builder()
                 .host(Constants.Host.PAYMENTS)

@@ -4,8 +4,8 @@ import com.google.gson.annotations.SerializedName;
 import lombok.*;
 import lombok.experimental.Accessors;
 import lombok.experimental.FieldDefaults;
-import net.aniby.paymaster.common.types.Amount;
-import net.aniby.paymaster.common.types.refunds.RefundStatus;
+import net.aniby.paymaster.modules.Amount;
+import net.aniby.paymaster.enums.RefundStatus;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Date;

@@ -1,15 +1,15 @@
-package net.aniby.paymaster.modules.receipts;
+package net.aniby.paymaster.modules.refunds;
 
 import com.google.gson.annotations.SerializedName;
 import lombok.*;
 import lombok.experimental.Accessors;
 import lombok.experimental.FieldDefaults;
 import net.aniby.paymaster.modules.Amount;
-import net.aniby.paymaster.enums.ReceiptStatus;
-import net.aniby.paymaster.types.reciepts.ReceiptType;
+import net.aniby.paymaster.types.items.Item;
+import net.aniby.paymaster.types.users.Client;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.Date;
+import java.util.ArrayList;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -17,25 +17,20 @@ import java.util.Date;
 @Getter
 @Accessors(fluent = true)
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class ReceiptDetails {
-    @SerializedName("id")
-    @NotNull String id;
-
-    @SerializedName("created")
-    @NotNull Date created;
-
+public class CreateRefundBody {
     @SerializedName("paymentId")
-    @NotNull String paymentId;
+    @NotNull
+    String paymentId;
 
     @SerializedName("amount")
     @NotNull
     Amount amount;
 
-    @SerializedName("type")
+    @SerializedName("client")
     @NotNull
-    ReceiptType type;
+    Client client;
 
-    @SerializedName("status")
+    @SerializedName("items")
     @NotNull
-    ReceiptStatus status;
+    ArrayList<Item> items;
 }

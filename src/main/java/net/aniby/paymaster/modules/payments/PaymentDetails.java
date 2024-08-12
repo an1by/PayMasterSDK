@@ -4,9 +4,10 @@ import com.google.gson.annotations.SerializedName;
 import lombok.*;
 import lombok.experimental.Accessors;
 import lombok.experimental.FieldDefaults;
-import net.aniby.paymaster.common.types.Amount;
-import net.aniby.paymaster.common.types.payments.*;
-import net.aniby.paymaster.common.types.users.Customer;
+import net.aniby.paymaster.enums.PaymentStatus;
+import net.aniby.paymaster.modules.Amount;
+import net.aniby.paymaster.modules.payments.confirmation.PaymentConfirmation;
+import net.aniby.paymaster.types.users.Customer;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Date;
@@ -32,7 +33,8 @@ public class PaymentDetails {
     PaymentStatus status;
 
     @SerializedName("merchantId")
-    @NotNull String merchantId;
+    @NotNull
+    String merchantId;
 
     @SerializedName("invoice")
     @NotNull

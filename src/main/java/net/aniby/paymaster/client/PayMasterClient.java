@@ -14,7 +14,7 @@ import net.aniby.paymaster.modules.tokens.PaymentTokenDetails;
 import net.aniby.paymaster.modules.tokens.TokenizationBody;
 import net.aniby.paymaster.modules.tokens.TokenizationCallback;
 import net.aniby.paymaster.utils.Constants;
-import net.aniby.paymaster.utils.ItemList;
+import net.aniby.paymaster.types.ItemList;
 import okhttp3.*;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;

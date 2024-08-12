@@ -1,4 +1,4 @@
-package net.aniby.paymaster.modules.payments.confirmation;
+package net.aniby.paymaster.types.confirmation;
 
 import com.google.gson.annotations.SerializedName;
 import lombok.*;

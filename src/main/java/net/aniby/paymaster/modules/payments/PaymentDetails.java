@@ -6,7 +6,7 @@ import lombok.experimental.Accessors;
 import lombok.experimental.FieldDefaults;
 import net.aniby.paymaster.enums.PaymentStatus;
 import net.aniby.paymaster.types.Amount;
-import net.aniby.paymaster.modules.payments.confirmation.PaymentConfirmation;
+import net.aniby.paymaster.types.confirmation.PaymentConfirmation;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Date;

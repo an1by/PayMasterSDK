@@ -14,7 +14,6 @@ import org.jetbrains.annotations.NotNull;
 @Accessors(fluent = true)
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class RegisterStickerRequest {
-
     @SerializedName("merchantId")
     @NotNull
     String merchantId;

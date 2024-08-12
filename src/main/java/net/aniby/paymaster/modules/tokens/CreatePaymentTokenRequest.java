@@ -6,7 +6,7 @@ import lombok.experimental.Accessors;
 import lombok.experimental.FieldDefaults;
 import net.aniby.paymaster.enums.TokenType;
 import net.aniby.paymaster.modules.payments.PaymentData;
-import net.aniby.paymaster.modules.payments.PaymentProtocol;
+import net.aniby.paymaster.types.Protocol;
 import org.jetbrains.annotations.NotNull;
 
 @AllArgsConstructor
@@ -37,7 +37,7 @@ public class CreatePaymentTokenRequest {
 
 
     @SerializedName("protocol")
-    PaymentProtocol protocol;
+    Protocol protocol;
 
     @SerializedName("customer")
     @NotNull

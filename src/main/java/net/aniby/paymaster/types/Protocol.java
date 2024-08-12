@@ -1,12 +1,9 @@
-package net.aniby.paymaster.utils;
+package net.aniby.paymaster.types;
 
 import com.google.gson.annotations.SerializedName;
 import lombok.*;
 import lombok.experimental.Accessors;
 import lombok.experimental.FieldDefaults;
-import org.jetbrains.annotations.NotNull;
-
-import java.util.ArrayList;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -14,8 +11,13 @@ import java.util.ArrayList;
 @Getter
 @Accessors(fluent = true)
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class ItemList<T> {
-    @SerializedName("items")
-    @NotNull
-    ArrayList<T> items;
+public class Protocol {
+    @SerializedName("returnUrl")
+    String returnUrl;
+
+    @SerializedName("callbackUrl")
+    String callbackUrl;
+
+    @SerializedName("threeDSCompleteUrl")
+    String threeDSCompleteUrl;
 }

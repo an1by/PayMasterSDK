@@ -1,4 +1,4 @@
-package net.aniby.paymaster.utils.json;
+package net.aniby.paymaster.utils;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
 import lombok.*;
 import lombok.experimental.Accessors;
 import lombok.experimental.FieldDefaults;
-import net.aniby.paymaster.utils.json.PayMasterEnum;
+import net.aniby.paymaster.utils.PayMasterEnum;
 import net.aniby.paymaster.utils.json.PayMasterEnumDeserializer;
 
 public class TestEnumDeserialization {

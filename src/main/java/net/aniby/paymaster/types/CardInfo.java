@@ -1,4 +1,4 @@
-package net.aniby.paymaster.types.items;
+package net.aniby.paymaster.types;
 
 import com.google.gson.annotations.SerializedName;
 import lombok.*;
@@ -11,10 +11,19 @@ import lombok.experimental.FieldDefaults;
 @Getter
 @Accessors(fluent = true)
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class Product {
+public class CardInfo {
+    @SerializedName("brand")
+    String brand;
+
+    @SerializedName("issuer")
+    String issuer;
+
     @SerializedName("country")
     String country;
 
-    @SerializedName("declaration")
-    String declaration;
+    @SerializedName("type")
+    String type;
+
+    @SerializedName("category")
+    String category;
 }

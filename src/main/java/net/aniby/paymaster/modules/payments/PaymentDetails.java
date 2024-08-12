@@ -5,9 +5,8 @@ import lombok.*;
 import lombok.experimental.Accessors;
 import lombok.experimental.FieldDefaults;
 import net.aniby.paymaster.enums.PaymentStatus;
-import net.aniby.paymaster.modules.Amount;
+import net.aniby.paymaster.types.Amount;
 import net.aniby.paymaster.modules.payments.confirmation.PaymentConfirmation;
-import net.aniby.paymaster.types.users.Customer;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Date;
@@ -60,9 +59,39 @@ public class PaymentDetails {
     @SerializedName("customer")
     Customer customer;
 
+    @AllArgsConstructor
+    @NoArgsConstructor
+    @ToString
+    @Getter
+    @Accessors(fluent = true)
+    @FieldDefaults(level = AccessLevel.PRIVATE)
+    public static class Customer {
+        @SerializedName("ip")
+        String ip;
+    }
+
     @SerializedName("confirmation")
     PaymentConfirmation confirmation;
 
     @SerializedName("paymentToken")
     PaymentToken paymentToken;
+
+    @AllArgsConstructor
+    @NoArgsConstructor
+    @ToString
+    @Getter
+    @Accessors(fluent = true)
+    @FieldDefaults(level = AccessLevel.PRIVATE)
+    public static class PaymentToken {
+        @SerializedName("id")
+        @NotNull
+        String id;
+
+        @SerializedName("expires")
+        @NotNull
+        Date expires;
+
+        @SerializedName("title")
+        String title;
+    }
 }

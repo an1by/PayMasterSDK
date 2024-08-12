@@ -2,7 +2,6 @@ package net.aniby.paymaster.client;
 
 import com.google.gson.reflect.TypeToken;
 import net.aniby.paymaster.exceptions.ResponseBodyException;
-import net.aniby.paymaster.modules.ItemList;
 import net.aniby.paymaster.modules.payments.*;
 import net.aniby.paymaster.modules.receipts.CreateReceiptBody;
 import net.aniby.paymaster.modules.receipts.ReceiptDetails;
@@ -15,6 +14,7 @@ import net.aniby.paymaster.modules.tokens.PaymentTokenDetails;
 import net.aniby.paymaster.modules.tokens.TokenizationBody;
 import net.aniby.paymaster.modules.tokens.TokenizationCallback;
 import net.aniby.paymaster.utils.Constants;
+import net.aniby.paymaster.utils.ItemList;
 import okhttp3.*;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -143,7 +143,7 @@ public class PayMasterClient {
                 .addQueryParameter("start", DATE_FORMAT.format(start))
                 .addQueryParameter("end", DATE_FORMAT.format(end))
                 .build().toString();
-        TypeToken<ItemList<PaymentDetails>> typeToken = new TypeToken<>() {
+        final TypeToken<ItemList<PaymentDetails>> typeToken = new TypeToken<>() {
         };
         return getRequest(url, typeToken).items();
     }
@@ -246,7 +246,7 @@ public class PayMasterClient {
                 .host(Constants.Host.STICKERS)
                 .addQueryParameter("merchantId", merchantId)
                 .build().toString();
-        TypeToken<ItemList<StickerDetails>> typeToken = new TypeToken<>() {
+        final TypeToken<ItemList<StickerDetails>> typeToken = new TypeToken<>() {
         };
         return getRequest(url, typeToken).items();
     }

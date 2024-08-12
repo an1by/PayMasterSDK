@@ -5,8 +5,8 @@ import lombok.*;
 import lombok.experimental.Accessors;
 import lombok.experimental.FieldDefaults;
 import net.aniby.paymaster.enums.ReceiptStatus;
-import net.aniby.paymaster.modules.Amount;
-import net.aniby.paymaster.types.reciepts.ReceiptType;
+import net.aniby.paymaster.enums.ReceiptType;
+import net.aniby.paymaster.types.Amount;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Date;

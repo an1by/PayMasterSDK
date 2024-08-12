@@ -5,7 +5,7 @@ import lombok.*;
 import lombok.experimental.Accessors;
 import lombok.experimental.FieldDefaults;
 import net.aniby.paymaster.enums.RefundStatus;
-import net.aniby.paymaster.modules.Amount;
+import net.aniby.paymaster.types.Amount;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Date;

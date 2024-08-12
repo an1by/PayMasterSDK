@@ -1,6 +1,6 @@
 package net.aniby.paymaster.enums;
 
-import net.aniby.paymaster.utils.json.PayMasterEnum;
+import net.aniby.paymaster.utils.PayMasterEnum;
 
 public enum ReceiptStatus implements PayMasterEnum {
     SUCCESS,

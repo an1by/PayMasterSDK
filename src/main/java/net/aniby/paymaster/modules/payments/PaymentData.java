@@ -5,7 +5,7 @@ import lombok.*;
 import lombok.experimental.Accessors;
 import lombok.experimental.FieldDefaults;
 import net.aniby.paymaster.enums.ReceiptMethod;
-import net.aniby.paymaster.types.items.CardInfo;
+import net.aniby.paymaster.types.CardInfo;
 
 @AllArgsConstructor
 @NoArgsConstructor

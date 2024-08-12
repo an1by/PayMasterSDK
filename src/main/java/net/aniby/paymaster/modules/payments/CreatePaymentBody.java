@@ -5,8 +5,8 @@ import lombok.*;
 import lombok.experimental.Accessors;
 import lombok.experimental.FieldDefaults;
 import net.aniby.paymaster.enums.ReceiptMethod;
-import net.aniby.paymaster.modules.Amount;
-import net.aniby.paymaster.types.users.Client;
+import net.aniby.paymaster.types.Amount;
+import net.aniby.paymaster.types.Client;
 import org.jetbrains.annotations.NotNull;
 
 @AllArgsConstructor

@@ -1,6 +1,7 @@
 package net.aniby.paymaster.utils.json;
 
 import com.google.gson.*;
+import net.aniby.paymaster.utils.PayMasterEnum;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;

@@ -9,6 +9,7 @@ import net.aniby.paymaster.modules.payments.PaymentData;
 import net.aniby.paymaster.types.Protocol;
 import org.jetbrains.annotations.NotNull;
 
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString

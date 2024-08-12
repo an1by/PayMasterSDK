@@ -7,6 +7,7 @@ import lombok.experimental.FieldDefaults;
 import net.aniby.paymaster.types.Amount;
 import org.jetbrains.annotations.NotNull;
 
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString

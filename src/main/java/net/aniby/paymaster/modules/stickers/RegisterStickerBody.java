@@ -7,13 +7,14 @@ import lombok.experimental.FieldDefaults;
 import net.aniby.paymaster.types.Amount;
 import org.jetbrains.annotations.NotNull;
 
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
 @Getter
 @Accessors(fluent = true)
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class RegisterStickerRequest {
+public class RegisterStickerBody {
     @SerializedName("merchantId")
     @NotNull
     String merchantId;

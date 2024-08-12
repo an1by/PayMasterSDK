@@ -7,7 +7,7 @@ import net.aniby.paymaster.modules.receipts.CreateReceiptBody;
 import net.aniby.paymaster.modules.receipts.ReceiptDetails;
 import net.aniby.paymaster.modules.refunds.CreateRefundBody;
 import net.aniby.paymaster.modules.refunds.RefundDetails;
-import net.aniby.paymaster.modules.stickers.RegisterStickerRequest;
+import net.aniby.paymaster.modules.stickers.RegisterStickerBody;
 import net.aniby.paymaster.modules.stickers.StickerDetails;
 import net.aniby.paymaster.modules.tokens.CreatePaymentTokenRequest;
 import net.aniby.paymaster.modules.tokens.PaymentTokenDetails;
@@ -221,7 +221,7 @@ public class PayMasterClient {
     }
 
     // Stickers
-    public StickerDetails registerSticker(RegisterStickerRequest body) throws IOException {
+    public StickerDetails registerSticker(RegisterStickerBody body) throws IOException {
         return postRequest(body, Constants.Host.STICKERS, TypeToken.get(StickerDetails.class));
     }
 

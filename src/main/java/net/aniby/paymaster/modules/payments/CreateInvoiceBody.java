@@ -10,6 +10,7 @@ import net.aniby.paymaster.types.Client;
 import net.aniby.paymaster.types.Protocol;
 import org.jetbrains.annotations.NotNull;
 
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString

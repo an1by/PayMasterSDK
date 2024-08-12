@@ -5,6 +5,7 @@ import lombok.*;
 import lombok.experimental.Accessors;
 import lombok.experimental.FieldDefaults;
 
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString

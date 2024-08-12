@@ -2,7 +2,6 @@ package net.aniby.paymaster;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
 import lombok.*;
 import lombok.experimental.Accessors;

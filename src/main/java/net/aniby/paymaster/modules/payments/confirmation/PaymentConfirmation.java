@@ -14,6 +14,7 @@ import org.jetbrains.annotations.NotNull;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public abstract class PaymentConfirmation {
     @SerializedName("type")
-    @NotNull String type;
+    @NotNull
+    String type;
     // ***		Параметры подтверждения - прописываем сами, создавая отдельный class, с extend'ом этого класса
 }

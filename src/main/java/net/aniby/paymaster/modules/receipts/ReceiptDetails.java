@@ -4,8 +4,8 @@ import com.google.gson.annotations.SerializedName;
 import lombok.*;
 import lombok.experimental.Accessors;
 import lombok.experimental.FieldDefaults;
-import net.aniby.paymaster.modules.Amount;
 import net.aniby.paymaster.enums.ReceiptStatus;
+import net.aniby.paymaster.modules.Amount;
 import net.aniby.paymaster.types.reciepts.ReceiptType;
 import org.jetbrains.annotations.NotNull;
 
@@ -19,13 +19,16 @@ import java.util.Date;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class ReceiptDetails {
     @SerializedName("id")
-    @NotNull String id;
+    @NotNull
+    String id;
 
     @SerializedName("created")
-    @NotNull Date created;
+    @NotNull
+    Date created;
 
     @SerializedName("paymentId")
-    @NotNull String paymentId;
+    @NotNull
+    String paymentId;
 
     @SerializedName("amount")
     @NotNull

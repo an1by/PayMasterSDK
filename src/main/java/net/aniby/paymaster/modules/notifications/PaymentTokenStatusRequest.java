@@ -17,10 +17,12 @@ import java.util.Date;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class PaymentTokenStatusRequest {
     @SerializedName("id")
-    @NotNull String id;
+    @NotNull
+    String id;
 
     @SerializedName("status")
-    @NotNull PaymentTokenStatus status;
+    @NotNull
+    PaymentTokenStatus status;
 
     @SerializedName("title")
     String title;

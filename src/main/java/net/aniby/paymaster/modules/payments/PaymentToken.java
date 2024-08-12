@@ -20,7 +20,8 @@ public class PaymentToken {
     String id;
 
     @SerializedName("expires")
-    @NotNull Date expires;
+    @NotNull
+    Date expires;
 
     @SerializedName("title")
     String title;

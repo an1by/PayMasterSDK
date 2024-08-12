@@ -9,5 +9,5 @@ public enum VatType implements PayMasterEnum {
     Vat10,
     Vat20,
     Vat110,
-    Vat120;
+    Vat120
 }

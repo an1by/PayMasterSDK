@@ -1,13 +1,9 @@
 package net.aniby.paymaster.modules.stickers;
 
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
-import lombok.Getter;
+import com.google.gson.annotations.SerializedName;
+import lombok.*;
 import lombok.experimental.Accessors;
 import lombok.experimental.FieldDefaults;
-import lombok.AccessLevel;
-import com.google.gson.annotations.SerializedName;
 import net.aniby.paymaster.modules.Amount;
 import org.jetbrains.annotations.NotNull;
 
@@ -24,7 +20,8 @@ public class RegisterStickerRequest {
     String merchantId;
 
     @SerializedName("stickerType")
-    @NotNull String stickerType;
+    @NotNull
+    String stickerType;
 
     @SerializedName("cashlink")
     Boolean cashLink;
@@ -36,7 +33,8 @@ public class RegisterStickerRequest {
     String productCode;
 
     @SerializedName("paymentPurpose")
-    @NotNull String paymentPurpose;
+    @NotNull
+    String paymentPurpose;
 
     @SerializedName("amount")
     Amount amount;

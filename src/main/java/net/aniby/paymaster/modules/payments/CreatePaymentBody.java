@@ -5,7 +5,6 @@ import lombok.*;
 import lombok.experimental.Accessors;
 import lombok.experimental.FieldDefaults;
 import net.aniby.paymaster.enums.ReceiptMethod;
-import net.aniby.paymaster.enums.TokenType;
 import net.aniby.paymaster.modules.Amount;
 import net.aniby.paymaster.types.users.Client;
 import org.jetbrains.annotations.NotNull;
@@ -98,25 +97,32 @@ public class CreatePaymentBody {
     @FieldDefaults(level = AccessLevel.PRIVATE)
     public static class Device {
         @SerializedName("language")
-        @NotNull String language;
+        @NotNull
+        String language;
 
         @SerializedName("acceptHeader")
-        @NotNull String acceptHeader;
+        @NotNull
+        String acceptHeader;
 
         @SerializedName("userAgent")
-        @NotNull String userAgent;
+        @NotNull
+        String userAgent;
 
         @SerializedName("colorDepth")
-        @NotNull String colorDepth;
+        @NotNull
+        String colorDepth;
 
         @SerializedName("screenHeight")
-        @NotNull String screenHeight;
+        @NotNull
+        String screenHeight;
 
         @SerializedName("screenWidth")
-        @NotNull String screenWidth;
+        @NotNull
+        String screenWidth;
 
         @SerializedName("utcOffsetMinutes")
-        @NotNull String utcOffsetMinutes;
+        @NotNull
+        String utcOffsetMinutes;
     }
 
     @SerializedName("receipt")

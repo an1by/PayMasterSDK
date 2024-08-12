@@ -14,7 +14,8 @@ import org.jetbrains.annotations.NotNull;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Marking {
     @SerializedName("code")
-    @NotNull String code;
+    @NotNull
+    String code;
 
     @SerializedName("quantity")
     Quantity quantity;

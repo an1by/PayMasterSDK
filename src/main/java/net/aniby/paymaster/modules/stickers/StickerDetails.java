@@ -19,7 +19,8 @@ public class StickerDetails {
     String id;
 
     @SerializedName("stickerType")
-    @NotNull String stickerType;
+    @NotNull
+    String stickerType;
 
     @SerializedName("cashlink")
     boolean cashLink;
@@ -28,7 +29,8 @@ public class StickerDetails {
     String productCode;
 
     @SerializedName("paymentPurpose")
-    @NotNull String paymentPurpose;
+    @NotNull
+    String paymentPurpose;
 
     @SerializedName("description")
     String description;
@@ -37,8 +39,10 @@ public class StickerDetails {
     Amount amount;
 
     @SerializedName("status")
-    @NotNull String status;
+    @NotNull
+    String status;
 
     @SerializedName("payload")
-    @NotNull String payload;
+    @NotNull
+    String payload;
 }

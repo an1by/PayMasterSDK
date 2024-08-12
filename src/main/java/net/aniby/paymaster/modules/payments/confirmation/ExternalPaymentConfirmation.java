@@ -11,7 +11,7 @@ import lombok.experimental.FieldDefaults;
 @Getter
 @Accessors(fluent = true)
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class ExternalPaymentConfirmation extends PaymentConfirmation{
+public class ExternalPaymentConfirmation extends PaymentConfirmation {
     @SerializedName("paymentUrl")
     String paymentUrl;
 

@@ -26,5 +26,5 @@ public enum Measure implements PayMasterEnum {
     MEGABYTE,
     GIGABYTE,
     TERABYTE,
-    OTHER;
+    OTHER
 }
